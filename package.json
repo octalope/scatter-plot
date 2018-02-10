@@ -1,0 +1,26 @@
+{
+  "name": "scatter-plot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/gulp"
+  },
+  "author": "steve.c.brooks@gmail.com",
+  "repository" : { 
+    "type" : "git"
+  , "url" : "git@gitlab.com:sbrooks/scatter-plot.git"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^4.17.0",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.2.0",
+    "gulp-open": "^2.1.0"
+  },
+  "dependencies": {
+    "jsdom": "^11.6.2",
+    "svg.js": "^2.6.4",
+    "svgdom": "0.0.15"
+  }
+}
