@@ -18,21 +18,21 @@ gulp.task('chart', function (cb) {
 
 gulp.task('html', function() {
   gulp.src('./src/*.html')
-      .pipe(gulp.dest('./dist'))
-      .pipe(connect.reload());
+    .pipe(gulp.dest('./dist'))
+    .pipe(connect.reload());
 });
 
 gulp.task('connect', function () {
   connect.server({
-      root: 'dist',
-      port: 8001,
-      livereload: true
+    root: 'dist',
+    port: 8001,
+    livereload: true
   });
 });
 
 gulp.task('open', function() {
   gulp.src('index.html')
-      .pipe(open({uri: 'http://localhost:8001/'}));
+    .pipe(open({uri: 'http://localhost:8001/'}));
 });
 
 gulp.task('watch', function () {

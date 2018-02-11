@@ -7,9 +7,9 @@
     "test": "./node_modules/.bin/gulp"
   },
   "author": "steve.c.brooks@gmail.com",
-  "repository" : { 
-    "type" : "git"
-  , "url" : "git@gitlab.com:sbrooks/scatter-plot.git"
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:sbrooks/scatter-plot.git"
   },
   "license": "ISC",
   "devDependencies": {
