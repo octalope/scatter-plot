@@ -1,8 +1,15 @@
 'use strict';
 
-var fs         = require('fs');
+const fs       = require('fs');
 const jsdom    = require('jsdom');
 const chart    = require('../lib/chart');
+
+var indices    = Array.apply(null, {length: 10}).map(Number.call, Number);
+var data = indices.map(i => {
+  var f = x => Math.sin(x*Math.PI);
+  var x = i/(indices.length-1);
+  return { x: x, y: f(x) };
+});
 
 function wrapSvgInHtmlDoc(svg) {
   const { JSDOM } = jsdom;
@@ -16,7 +23,11 @@ function wrapSvgInHtmlDoc(svg) {
   return dom.window.document.documentElement.outerHTML;
 }
 
-fs.writeFile('./src/chart.html', wrapSvgInHtmlDoc(chart.createChart()), function (err){
+fs.writeFile('./src/chart.html', wrapSvgInHtmlDoc(chart.createChart({
+  width: 600,
+  height: 400,
+  data: data
+})), function (err){
   if (err) throw err;
 });
 
