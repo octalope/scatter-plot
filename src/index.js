@@ -6,8 +6,8 @@ const chart    = require('../lib/chart');
 
 var indices    = Array.apply(null, {length: 10}).map(Number.call, Number);
 var data = indices.map(i => {
-  var f = x => Math.sin(x*Math.PI);
-  var x = i/(indices.length-1);
+  var f = x => Math.sin(x);
+  var x = (i/(indices.length-1)) * Math.PI;
   return { x: x, y: f(x) };
 });
 
