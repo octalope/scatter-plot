@@ -19,7 +19,7 @@
     "gulp-open": "^2.1.0"
   },
   "dependencies": {
-    "jsdom": "^11.6.2",
+    "jsdom": "^16.5.0",
     "svg.js": "^2.6.4",
     "svgdom": "0.0.15"
   }
